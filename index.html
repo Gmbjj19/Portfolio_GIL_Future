@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Gil Márcio · Portfólio Cinematic 3D</title>
+<title>Gil Marcio Bispo de Jesus Junior · Portfólio</title>
 <style>
 :root{color-scheme:dark;--bg:#03040c;--card:rgba(12,16,38,.55);--line:rgba(120,160,255,.2);--tx:#eef2ff;--mut:#98a4c8;--cy:#00e5ff;--vi:#a78bfa;--pk:#ff4fd8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box;margin:0}
@@ -50,42 +50,63 @@ h2{font-size:clamp(32px,5vw,66px);line-height:1.05;margin-bottom:16px;letter-spa
 .rv{opacity:0;transform:translateY(50px) scale(.97);filter:blur(8px);transition:opacity 1s,transform 1s,filter 1s}.rv.on{opacity:1;transform:none;filter:none}
 footer{position:relative;z-index:2;text-align:center;color:var(--mut);font-size:12px;padding:30px}
 @media(max-width:820px){nav div{display:none}}
+.hero{display:grid!important;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px}.hero h1{font-size:clamp(42px,6.6vw,100px)}
+.pc{position:relative;justify-self:center;width:min(400px,80vw);perspective:900px}.pf{position:relative;aspect-ratio:4/5;border-radius:26px;transition:transform .15s;transform-style:preserve-3d;padding:3px;background:conic-gradient(from var(--a,0deg),var(--cy),var(--vi),var(--pk),var(--cy));animation:rot 6s linear infinite;box-shadow:0 0 80px rgba(0,229,255,.28),0 0 140px rgba(167,139,250,.2)}
+@property --a{syntax:'<angle>';inherits:false;initial-value:0deg}@keyframes rot{to{--a:360deg}}
+.pf img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:24px;display:block}.sh{position:absolute;inset:3px;border-radius:24px;background:radial-gradient(260px circle at var(--sx,50%) var(--sy,20%),rgba(255,255,255,.22),transparent 60%);pointer-events:none}
+.chip{position:absolute;z-index:4;background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:12px;animation:fy 5s ease-in-out infinite}.chip b{display:block;color:var(--cy);font-size:10px;letter-spacing:.14em;margin-bottom:3px}@keyframes fy{50%{translate:0 -12px}}
+.tl{position:relative}.tl:after{content:"";position:absolute;left:-2px;top:0;width:2px;height:calc(var(--p,0)*100%);background:linear-gradient(var(--cy),var(--pk));box-shadow:0 0 14px var(--cy)}
+.tl ul{margin:8px 0 0 18px;color:var(--mut);font-size:14px;line-height:1.7;max-width:680px}.tl li::marker{color:var(--cy)}.tl li b{color:var(--tx)}
+.cp{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.cp i{font-style:normal;font-size:13px;padding:8px 14px;border-radius:99px;border:1px solid var(--line);background:rgba(0,229,255,.06);color:var(--tx);transition:.3s}.cp i:hover{border-color:var(--cy);box-shadow:0 0 18px rgba(0,229,255,.4);transform:translateY(-2px)}.cp.big{margin-top:34px}.cp i.wip{border-style:dashed;color:var(--vi)}
+.tl h3{font-size:20px}.cta .btn{margin:0 6px 10px}
+@media(max-width:820px){.hero{grid-template-columns:1fr}}
 </style></head><body>
 <div id="bar"></div><div id="cur"></div><div id="cur2"></div>
 <div id="intro"><div id="it">INICIALIZANDO EXPERIÊNCIA 3D… 0%</div><i><u id="iu"></u></i></div>
 <canvas id="c"></canvas>
-<nav><b>GIL<i></i></b><div><a href="#sobre">Sobre</a><a href="#exp">Experiência</a><a href="#proj">Projetos</a><a href="#contato">Contato</a></div></nav>
+<nav><b>GIL<i></i></b><div><a href="#sobre">Sobre</a><a href="#exp">Experiência</a><a href="#skills">Competências</a><a href="#proj">Projetos</a><a href="#edu">Formação</a><a href="#contato">Contato</a></div></nav>
 <main>
-<section id="top"><div class="tag">— Portfólio profissional / Tecnologia</div>
-<h1>Gil Márcio<br>Bispo de Jesus<br><span class="gl">Júnior</span></h1>
+<section id="top" class="hero"><div class="hl"><div class="tag">— Portfólio profissional / Dados &amp; Sistemas</div>
+<h1>Gil Marcio<br>Bispo de Jesus<br><span class="gl">Junior</span></h1>
 <div class="role" id="role"></div>
-<p class="lead">Engenharia de soluções digitais com foco em impacto: sistemas, dashboards e experiências 3D que transformam processos em resultados.</p>
-<div><a class="btn p" href="#proj">Explorar projetos ↓</a><a class="btn g" href="#exp">Minha trajetória</a></div>
+<p class="lead">Estagiário de Engenharia Civil com experiência em dados, atendimento e processos digitais no setor de seguros, e desenvolvedor de experiências web em 3D.</p>
+<div><a class="btn p" href="#proj">Explorar projetos ↓</a><a class="btn g" href="#exp">Minha trajetória</a></div></div>
 <div class="scroll">ROLE<i></i></div></section>
-<section id="sobre"><div class="mq"><div><span>REACT</span><b>✦</b><span>THREE.JS</span><b>✦</b><span>DASHBOARDS</span><b>✦</b><span>AUTOMAÇÃO</span><b>✦</b><span>EXCEL</span><b>✦</b><span>UX/UI</span><b>✦</b><span>DADOS</span><b>✦</b><span>REACT</span><b>✦</b><span>THREE.JS</span><b>✦</b><span>DASHBOARDS</span><b>✦</b><span>AUTOMAÇÃO</span><b>✦</b><span>EXCEL</span><b>✦</b><span>UX/UI</span><b>✦</b><span>DADOS</span><b>✦</b></div></div>
+<section id="sobre"><div class="mq"><div><span>DADOS</span><b>✦</b><span>EXCEL</span><b>✦</b><span>AUTOCAD</span><b>✦</b><span>PYTHON</span><b>✦</b><span>THREE.JS</span><b>✦</b><span>RELATÓRIOS</span><b>✦</b><span>ATENDIMENTO</span><b>✦</b><span>PROCESSOS</span><b>✦</b><span>DADOS</span><b>✦</b><span>EXCEL</span><b>✦</b><span>AUTOCAD</span><b>✦</b><span>PYTHON</span><b>✦</b><span>THREE.JS</span><b>✦</b><span>RELATÓRIOS</span><b>✦</b><span>ATENDIMENTO</span><b>✦</b><span>PROCESSOS</span><b>✦</b></div></div>
 <div style="height:60px"></div><div class="rv"><div class="tag">01 / Sobre</div>
-<h2 data-sc>Tecnologia com propósito.<br><span>Resultados que permanecem.</span></h2>
-<p class="lead">Administro dados e ferramentas digitais de uma comunidade com vários grupos de trabalho, e transformo rotinas manuais em sistemas claros, rápidos e bonitos.</p></div>
+<h2 data-sc>Análise, atendimento e<br><span>processos que funcionam.</span></h2>
+<p class="lead">Perfil administrativo com forte orientação analítica: organizo dados, acompanho indicadores e apoio decisões, com boa comunicação, proatividade e trabalho em equipe. Também contribuo com operações de e-commerce e ambientes digitais.</p></div>
 <div class="grid">
-<div class="card rv"><em>01</em><h3>Estratégia &amp; arquitetura</h3><p>Conecta prioridades a soluções seguras, escaláveis e sustentáveis.</p></div>
-<div class="card rv"><em>02</em><h3>Execução &amp; impacto</h3><p>Conduz iniciativas da descoberta à entrega, acompanhando métricas.</p></div>
-<div class="card rv"><em>03</em><h3>Liderança &amp; colaboração</h3><p>Desenvolve equipes e traz clareza para contextos complexos.</p></div></div>
-<div class="stats rv"><div><b data-n="5">0</b><b>+</b><small>projetos digitais</small></div><div><b data-n="4">0</b><small>frentes: web, 3D, dados, finanças</small></div><div><b data-n="100">0</b><b>%</b><small>dedicação a cada entrega</small></div></div></section>
+<div class="card rv"><em>01</em><h3>Dados &amp; análise</h3><p>Organização, interpretação e controle de dados operacionais e relatórios gerenciais.</p></div>
+<div class="card rv"><em>02</em><h3>Atendimento &amp; negociação</h3><p>Do primeiro contato à contratação, com foco em conversão, retenção e satisfação.</p></div>
+<div class="card rv"><em>03</em><h3>Processos &amp; sistemas</h3><p>Acompanhamento de protocolos e solução de falhas para manter a operação eficiente.</p></div></div>
+<div class="stats rv"><div><b data-n="2">0</b><b>+</b><small>anos em seguros e operações</small></div><div><b data-n="8">0</b><small>certificados concluídos</small></div><div><b data-n="5">0</b><small>projetos digitais próprios</small></div></div></section>
 <section id="exp"><div class="rv"><div class="tag">02 / Experiência</div><h2 data-sc>Experiência <span>profissional</span></h2></div>
-<div class="tl">
-<div class="rv"><small>[AAAA — atual]</small><h3>Administrador · Congregação Cristã no Brasil, Vila Medeiros</h3><p>Gestão de frequência, listas de membros e ferramentas digitais para múltiplos grupos de ministério.</p></div>
-<div class="rv"><small>[AAAA — AAAA]</small><h3>[Cargo anterior] · [Organização]</h3><p>[Responsabilidades e resultados com evidências.]</p></div>
-<div class="rv"><small>[AAAA — AAAA]</small><h3>[Cargo anterior] · [Organização]</h3><p>[Desafio, decisões e aprendizados.]</p></div></div></section>
-<section id="proj"><div class="rv"><div class="tag">03 / Projetos</div><h2 data-sc>Projetos <span>em destaque</span></h2></div>
+<div class="tl" id="tl">
+<div class="rv"><small>02/2026 — atual · São Paulo, presencial</small><h3>Estagiário de Engenharia Civil · Marcom Empreiteira</h3><p style="color:var(--mut);font-size:13px;margin-bottom:4px">Levantamento estrutural &amp; quantitativos</p><ul><li><b>Levantamento quantitativo</b> de concreto, vigas, pilares, lajes e escadas</li><li><b>Interpretação de projetos estruturais</b> em AutoCAD</li><li><b>Planilhas automatizadas</b> em Excel e Power Query</li><li>Apoio no <b>planejamento e controle de medições</b> em obra</li><li>Organização e compatibilização de informações técnicas</li><li>Otimização dos processos de cálculo e conferência de quantitativos</li></ul></div>
+<div class="rv"><small>08/2023 — 08/2025</small><h3>Auxiliar Administrativo · Corretora e Consultoria RRC Ltda</h3><ul><li><b>Gestão financeira</b> e controle de inadimplência da carteira de clientes</li><li><b>Análise de dados</b> de seguros e atualização de informações no sistema PORTO</li><li><b>Atendimento e negociação</b>: cotações, contratos e acompanhamento até a contratação</li><li><b>Retenção</b>: renovações de apólices, recálculos e estratégias para reduzir cancelamentos</li><li><b>Sinistros</b>: abertura e acompanhamento, validando coberturas e pagamentos</li><li><b>Relatórios gerenciais</b> para apoio a indicadores e tomada de decisão</li></ul></div>
+<div class="rv"><small>01/2023 — 06/2023</small><h3>Atendente e balconista · Padaria Padoka Ki Delícia</h3><ul><li>Atendimento, vendas e preparo de lanches e bebidas</li><li>Controle e reposição de estoque, com foco em um ambiente de serviço colaborativo</li></ul></div></div></section>
+<section id="skills"><div class="rv"><div class="tag">03 / Competências</div><h2 data-sc>Habilidades <span>e ferramentas</span></h2></div>
 <div class="grid">
-<div class="card rv"><em>CASE 01</em><h3>Site 3D interativo</h3><p>Página única com o templo em 3D navegável e animações imersivas.</p></div>
+<div class="card rv"><em>DADOS &amp; SISTEMAS</em><div class="cp"><i>Excel</i><i>Pacote Office</i><i>Banco de dados</i><i>Python</i><i>Power Query</i><i>Relatórios gerenciais</i><i>Indicadores</i></div></div>
+<div class="card rv"><em>ENGENHARIA CIVIL</em><div class="cp"><i>AutoCAD</i><i>Projetos estruturais</i><i>Levantamento de quantitativos</i><i>Medições em obra</i><i>Planilhas automatizadas</i></div></div>
+<div class="card rv"><em>WEB &amp; 3D</em><div class="cp"><i>HTML</i><i>CSS</i><i>JavaScript</i><i>Three.js</i><i>WebGL</i><i>UI/UX</i></div></div>
+<div class="card rv"><em>NEGÓCIOS</em><div class="cp"><i>Atendimento</i><i>Negociação</i><i>Retenção</i><i>Cotações</i><i>Sinistros</i><i>Processos</i></div></div>
+<div class="card rv"><em>PESSOAS &amp; IDIOMAS</em><div class="cp"><i>Trabalho em equipe</i><i>Proatividade</i><i>Flexibilidade</i><i>Português · nativo</i><i>Inglês · básico</i></div></div></div></section>
+<section id="proj"><div class="rv"><div class="tag">04 / Projetos</div><h2 data-sc>Projetos <span>em destaque</span></h2></div>
+<div class="grid">
+<div class="card rv"><em>CASE 01</em><h3>Site 3D interativo</h3><p>Página única com um edifício em 3D navegável e animações imersivas.</p></div>
 <div class="card rv"><em>CASE 02</em><h3>Nova Geração</h3><p>Dashboard front-end para acompanhar membros com visão consolidada.</p></div>
 <div class="card rv"><em>CASE 03</em><h3>Norte · Gestão financeira</h3><p>App com visão geral, contas, movimentações, metas e dívidas.</p></div>
-<div class="card rv"><em>CASE 04</em><h3>Planilhas de frequência</h3><p>Excel que automatiza a presença dos grupos de ministério.</p></div></div></section>
+<div class="card rv"><em>CASE 04</em><h3>Planilhas de frequência</h3><p>Excel que automatiza o controle de presença de vários grupos.</p></div>
+<div class="card rv"><em>CASE 05</em><h3>Marketplace de afiliados</h3><p>Site de produtos do Mercado Livre com painel admin, SEO e blog.</p></div></div></section>
+<section id="edu"><div class="rv"><div class="tag">05 / Formação</div><h2 data-sc>Formação <span>e certificados</span></h2></div>
+<div class="tl"><div class="rv"><small>02/2025 — 01/2030 · cursando</small><h3>Bacharelado em Engenharia Civil · Faculdade Anhanguera</h3></div><div class="rv"><small>02/2017 — 12/2023 · concluído</small><h3>Ensino médio · Carmosina Monteiro Vianna</h3></div></div>
+<div class="cp big rv"><i>Auxiliar Administrativo · WR Educacional</i><i>Informática Avançada · WR Educacional</i><i>Inglês Fund. e Médio · WR Educacional</i><i>Pacote Office · Fundação Bradesco</i><i>Administração de Banco de Dados · Fundação Bradesco</i><i>Python com Interface Gráfica · Fundação Bradesco</i><i>Lógica e Python · Fundação Bradesco</i><i>Excel Essencial · Curso em Vídeo</i><i class="wip">Análise e Desenv. de Sistemas · Udemy · em andamento</i><i class="wip">Desenvolvedor de Software · Escola do Trabalhador 4.0 · em andamento</i></div></section>
 <section id="contato" class="cta"><div class="rv"><div class="tag">Próximo passo</div><h2 data-sc>Vamos construir algo <span>relevante?</span></h2>
-<p class="lead" style="margin:18px auto 30px">Conecte comigo para conversar sobre tecnologia, liderança e novos desafios.</p><a class="btn p" href="#">Entre em contato →</a></div></section>
+<p class="lead" style="margin:18px auto 30px">Conecte comigo para conversar sobre dados, sistemas, atendimento e novos desafios.</p><a class="btn p mg" href="mailto:gmbj.junior20@gmail.com">Enviar e-mail →</a><a class="btn g mg" href="https://www.linkedin.com/in/gil-marcio-bispo-de-jesus-junior-62a508289/" target="_blank" rel="noopener">LinkedIn</a><a class="btn g mg" href="https://github.com/Gmbjj19" target="_blank" rel="noopener">GitHub</a></div></section>
 </main>
-<footer>© 2026 GIL MÁRCIO BISPO DE JESUS JÚNIOR · LinkedIn · GitHub · [E-mail]</footer>
+<footer>© 2026 GIL MARCIO BISPO DE JESUS JUNIOR · São Paulo, SP</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -99,7 +120,7 @@ function scr(el){const nodes=[];const w=document.createTreeWalker(el,4);let n;wh
 const t_max=ns=>Math.max(...ns.map(([,t])=>t.length))*1.2+6;
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting&&!x.target.classList.contains('on')){x.target.classList.add('on');x.target.querySelectorAll('[data-sc]').forEach(scr);x.target.querySelectorAll('[data-n]').forEach(c=>{const m=+c.dataset.n;let v=0;const i=setInterval(()=>{v+=Math.ceil(m/40);if(v>=m){v=m;clearInterval(i)}c.textContent=v},35)})}}),{threshold:.2});
 $$('.rv').forEach(e=>io.observe(e));
-const roles=['Engenharia de soluções digitais','Desenvolvedor de experiências 3D','Administrador &amp; estrategista de dados'].map(s=>s.replace('&amp;','&'));let ri=0,ci=0,dl=false;
+const roles=['Dados, sistemas e automação','Experiências web em 3D','Estudante de Engenharia Civil'];let ri=0,ci=0,dl=false;
 (function ty(){const r=$('#role'),w=roles[ri];ci+=dl?-1:1;r.textContent='> '+w.slice(0,ci);let d=dl?25:60;if(!dl&&ci===w.length){dl=true;d=1600}else if(dl&&ci===0){dl=false;ri=(ri+1)%roles.length;d=400}setTimeout(ty,d)})();
 let p=0;const ii=setInterval(()=>{p+=Math.random()*9+3;if(p>=100){p=100;clearInterval(ii);setTimeout(()=>$('#intro').classList.add('off'),300)}$('#iu').style.width=p+'%';$('#it').textContent='INICIALIZANDO EXPERIÊNCIA 3D… '+(p|0)+'%'},90);
 try{
@@ -128,4 +149,8 @@ core.material.uniforms.t.value=t;core.rotation.y=t*.2;wire.rotation.y=-t*.15;wir
 stars.rotation.z=t*.01;rings.forEach((m,i)=>{m.rotation.z+=.002*(i%2?1:-1)*(1+i*.1)});shp.forEach((m,i)=>{m.rotation.x+=.006;m.rotation.y+=.008;m.position.y+=Math.sin(t+i)*.006});
 r.render(s,cam);requestAnimationFrame(L)})();
 }catch(e){}
+
+(()=>{const pc=$('#pc'),pf=$('#pf');if(pc){pc.addEventListener('mousemove',e=>{const q=pf.getBoundingClientRect(),x=(e.clientX-q.left)/q.width,y=(e.clientY-q.top)/q.height;pf.style.transform=`rotateY(${(x-.5)*22}deg) rotateX(${-(y-.5)*22}deg)`;pf.style.setProperty('--sx',x*100+'%');pf.style.setProperty('--sy',y*100+'%')});pc.addEventListener('mouseleave',()=>pf.style.transform='')}
+$$('.mg').forEach(b=>{b.addEventListener('mousemove',e=>{const q=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-q.left-q.width/2)*.2}px,${(e.clientY-q.top-q.height/2)*.3}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
+const tls=$$('.tl');const up=()=>tls.forEach(t=>{const q=t.getBoundingClientRect();t.style.setProperty('--p',Math.min(1,Math.max(0,(innerHeight*.7-q.top)/q.height)))});addEventListener('scroll',up,{passive:true});up()})();
 </script></body></html>
